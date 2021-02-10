@@ -15,7 +15,7 @@ import '../styling/style.css';
 export const App = () => {
     // set the states
     const [content, setContent] = useState([])
-    console.log(process.env)
+    // console.log(process.env)
     var url = `http://newsapi.org/v2/top-headlines?`+`country=us&`+`apiKey=${process.env.REACT_APP_API_KEY}`
 
     //make axios call
@@ -26,7 +26,7 @@ export const App = () => {
             })
     }, [])
 
-    console.log(content)
+    // console.log(content)
 
 
     return (
@@ -34,7 +34,7 @@ export const App = () => {
         <Router>
             <div className='app'>
                 <Landing />
-                <Display />
+                <Display content={content}/>
             </div>
         </Router>
     )

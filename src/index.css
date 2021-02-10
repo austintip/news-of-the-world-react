@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.newsImg {
+  width: 50vh;
+  height: 40vh;
+  
+}
