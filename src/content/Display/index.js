@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 export const Display = props => {
 
     let content = props.data ? '' : 'Ruh-Roh! API or props fail!';
@@ -7,6 +8,7 @@ export const Display = props => {
     return (
         <div>
             <p>{content}</p>
+            <h1>Seriously</h1>
         </div>
     )
 };

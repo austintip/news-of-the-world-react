@@ -2,6 +2,6 @@ import React from 'react';
 
 export const Landing = props => {
     return (
-        <div></div>
+        <div><h1>HELP</h1></div>
     )
 };
