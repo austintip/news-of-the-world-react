@@ -4,34 +4,30 @@ import React from 'react';
 
 export const Display = props => {
     let content = props.content ? '' : 'Ruh-Roh! API or props fail!';
-    console.log(props.content.articles)
-    let title
+    // console.log(props.content.articles)
+    // let title
 
-    if (props.content.length != 0) {
-        title = props.content.articles.map((article, i) => {
-            return (<li key={i}>
-                <a href={article.url} target="_blank">
+    // if (props.content.length !== 0) {
+console.log('this is for display', props.article)
+    return (
+        <div>
+            <li key={props.i}>
+                <a href={props.article.url} target="_blank">
                     <h2>
-                        {article.title}
+                        {props.article.title}
                     </h2>
-                    <img className="newsImg" src={article.urlToImage} />
+                    <img className="newsImg" src={props.article.urlToImage} />
                 </a>
                 <br></br>
                 <h5>
-                    {article.author}
+                    {props.article.author}
                 </h5>
                 <br></br>
                 <p>
-                    {article.publishedAt}
+                    {props.article.publishedAt}
                 </p>
-            </li>)
-        })
-    }
+            </li>
 
-    return (
-        <div>
-            {content}
-            <p>{title}</p>
         </div>
     )
 };
